@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Game Tank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 650px;
+        background: url("CaseResources/StartGame_BattleTank.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+<body>
+<div class="button">
+    <a class="buttonStart" onclick="confirmMode()" href="GameTank.html">START</a>
+    <button id="gameMode" class="buttonStart" onclick="changeMode()">EASY</button>
+</div>
+
+</body>
+<script>
+    function changeMode() {
+        let mode = document.getElementById("gameMode");
+        if (mode.innerHTML === "EASY") mode.innerHTML = "MEDIUM";
+        else if (mode.innerHTML === "MEDIUM") mode.innerHTML = "HARD";
+        else mode.innerHTML = "EASY";
+    }
+    function confirmMode() {
+        let mode = document.getElementById("gameMode").innerHTML;
+        localStorage.setItem("gameMode", mode);
+    }
+</script>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Long's Game: Tank</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+    .canvas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+    }
+    .result {
+        position: fixed;
+        z-index: 2;
+    }
+    .buttonBoard {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        position: fixed;
+        margin-top: 300px;
+        z-index: 0;
+    }
+    .buttonBoard .button {
+        font-size: 25px;
+        font-weight: 700;
+        width: 200px;
+        height: 75px;
+        margin: 50px;
+        border: 3px solid black;
+        border-radius: 25px;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    .buttonBoard .button:hover {
+        transition: 0.5s;
+        font-size: 35px;
+        background: white;
+    }
+</style>
+<body>
+<!--Image Sources-->
+<!--Background-->
+<img id="background" src="CaseResources/Background/Background.jpg" hidden>
+<!--Tank-->
+<img id="tankUp" src="CaseResources/Tank/Tank_Up.png" hidden>
+<img id="tankDown" src="CaseResources/Tank/Tank_Down.png" hidden>
+<img id="tankLeft" src="CaseResources/Tank/Tank_Left.png" hidden>
+<img id="tankRight" src="CaseResources/Tank/Tank_Right.png" hidden>
+<!--Tank Enemy-->
+<img id="tankEnemyUp" src="CaseResources/TankEnemy/Tank_Up.png" hidden>
+<img id="tankEnemyDown" src="CaseResources/TankEnemy/Tank_Down.png" hidden>
+<img id="tankEnemyLeft" src="CaseResources/TankEnemy/Tank_Left.png" hidden>
+<img id="tankEnemyRight" src="CaseResources/TankEnemy/Tank_Right.png" hidden>
+<!--Bullet-->
+<img id="bulletUp" src="CaseResources/Bullet/BulletUp.png" hidden>
+<img id="bulletDown" src="CaseResources/Bullet/BulletDown.png" hidden>
+<img id="bulletLeft" src="CaseResources/Bullet/BulletLeft.png" hidden>
+<img id="bulletRight" src="CaseResources/Bullet/BulletRight.png" hidden>
+<!--Unbreakable Objects-->
+<img id="unbreakable" src="CaseResources/Objects/Unbreakable.jpg" hidden>
+
+
+<canvas class="canvas" id="canvas" width="800px" height="650px" style="padding-top: 0; margin-top: 0"></canvas>
+<img id="result" class="result" src="">
+<div id="buttonBoard" class="buttonBoard">
+    <button id="button1" class="button" onclick="redirectToIndexPage()">Main Page</button>
+    <button id="button2" class="button" onclick="redirectReload()">Play Again</button>
+</div>
+<script src="GameTank.js"></script>
+</body>
+</html>
