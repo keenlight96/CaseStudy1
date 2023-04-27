@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("Interstellar's Black Hole.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /*background: cyan;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*z-index: 99;*/
+}
+
+.logo {
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1em;
+    /*justify-content: center;*/
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 40px;
+}
+.navigation .popup-btnLogin {
+    width: 100px;
+    height: 50px;
+    font-size: 1.2em;
+    font-weight: 800;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 10px;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.navigation .popup-btnLogin:hover {
+    font-size: 1.7em;
+    background: white;
+    color: black;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+}
+.button .buttonStart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    font-size: 2em;
+    font-weight: 900;
+    border: 5px solid white;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    margin: 100px;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+
+}
+.button .buttonStart:hover {
+    transition: 0.5s;
+    background: white;
+    color: black;
+
+}
